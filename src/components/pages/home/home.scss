@@ -1,0 +1,69 @@
+.container{
+  width: 100%;
+  height: 100%;
+
+  .main-layout{
+    width: 100%;
+    height: 100%;
+  }
+
+  .sider-cont{
+    overflow: hidden;
+    
+
+    .logo-cont{
+      height: 64px;
+      line-height: 64px;
+      text-align: center;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+    }
+  }
+
+  .sider-bar{
+    width: 200px;
+
+    .menu-item-span{
+      display: inline-block;
+      overflow: hidden;
+      width: 69px;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      vertical-align: bottom;
+      transition: width .2s ease .2s;
+    }
+
+    .ivu-menu-item i{
+      transform: translateX(0px);
+      transition: font-size .2s ease, transform .2s ease;
+      vertical-align: middle;
+      font-size: 16px;
+    }
+
+    &.collapsed-menu span{
+      width: 0px;
+      transition: width .2s ease;
+    }
+    &.collapsed-menu i{
+      transform: translateX(-2px);
+      transition: font-size .2s ease .2s, transform .2s ease .2s;
+      vertical-align: middle;
+      font-size: 22px;
+    }
+  }
+
+  .right-cont{
+    flex: 1;
+    height: 100%;
+
+    .header-cont{
+      background-color: #fff;
+    }
+
+    .main-cont{
+      height: calc( 100% - 64px );
+      overflow-y: auto;
+    }
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "extends": "eslint-config-tqfe/vue",
+  "rules": {
+    "no-magic-numbers": "off",
+    "no-console": "off"
+  }
+}

@@ -1,0 +1,31 @@
+$showBoxWidth: 400px;
+$showBoxHeight: 300px;
+@function scaleHeight($realWidth, $realHeight) {
+  @return $showBoxWidth * $realHeight / $realWidth;
+}
+.content{
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.show-item{
+  width: $showBoxWidth;
+  height: $showBoxHeight;
+  margin: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc;
+  box-shadow: 1px 1px 3px #ccc;
+  border-radius: 10px;
+  background-color: #fff;
+  padding: 15px;
+  box-sizing: border-box;
+  position: relative;
+
+  &.bg-black{
+    background-color: #495060;
+    color: rgba(255, 255, 255, .8);
+  }
+}
