@@ -49,7 +49,6 @@
       class='bg-grey'>
       <box-style-5 class='box-style-5' title='Box-Style-5'>
         <!-- 内容区自定义，默认内容使用时删除 -->
-        <h3></h3>
         <p><strong>Bg Size:</strong> no limit</p>
         <p><strong>Image:</strong> box-shadow</p>
       </box-style-5>

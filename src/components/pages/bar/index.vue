@@ -12,6 +12,9 @@
     <box-container class='bg-grey' :spinShow='spinShow4'>
       <both-sides-bar :source='bothSource' />
     </box-container>
+    <box-container class='bg-grey' :spinShow='spinShow5'>
+      <pictorial-bar :source='pictorialSource' />
+    </box-container>
   </div>
 </template>
 <script>
@@ -20,6 +23,7 @@ import baseBar from '~components/cell/bar/bar-style-1.vue';
 import barStyleTwo from '~components/cell/bar/bar-style-2.vue';
 import pictorialBar1 from '~components/cell/bar/bar-pictorial-style-1.vue';
 import bothSidesBar from '~components/cell/bar/both-sides-bar.vue'
+import PictorialBar from '~components/cell/bar/pictorial-bar.vue'
 
 
 export default {
@@ -29,6 +33,7 @@ export default {
     'bar-style-two': barStyleTwo,
     'bar-pictorial-style-1': pictorialBar1,
     'both-sides-bar': bothSidesBar,
+    'pictorial-bar': PictorialBar,
   },
   data() {
     return {
@@ -60,6 +65,7 @@ export default {
       spinShow2: true,
       spinShow3: true,
       spinShow4: false,
+      spinShow5: false,
       bothSource: [
         { name: '北京', data1: 100, data2: 10 },
         { name: '上海', data1: 120, data2: 30 },
@@ -67,6 +73,13 @@ export default {
         { name: '深圳', data1: 80, data2: 20 },
         { name: '杭州', data1: 150, data2: 40 },
       ],
+      pictorialSource: {
+        '驻村警务人员': 20,
+        '网格长': 21,
+        '平安志愿者服务队': 20,
+        '社会组织': 545,
+        '网格联络员': 734,
+      },
     }
   },
   mounted() {
