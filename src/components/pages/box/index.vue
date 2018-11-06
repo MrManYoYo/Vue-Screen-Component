@@ -44,6 +44,16 @@
         <p><strong>Image:</strong> box-shadow</p>
       </box-style-4>
     </box-container>
+    <box-container
+      :toolsShow='false'
+      class='bg-grey'>
+      <box-style-5 class='box-style-5' title='Box-Style-5'>
+        <!-- 内容区自定义，默认内容使用时删除 -->
+        <h3></h3>
+        <p><strong>Bg Size:</strong> no limit</p>
+        <p><strong>Image:</strong> box-shadow</p>
+      </box-style-5>
+    </box-container>
   </div>
 </template>
 <script>
@@ -53,6 +63,7 @@ import Box1Small from '../../cell/box/box-style-1-small'
 import Box2 from '../../cell/box/box-style-2'
 import Box3 from '../../cell/box/box-style-3'
 import Box4 from '../../cell/box/box-style-4'
+import Box5 from '../../cell/box/box-style-5'
 
 export default {
   components: {
@@ -62,6 +73,7 @@ export default {
     'box-style-2': Box2,
     'box-style-3': Box3,
     'box-style-4': Box4,
+    'box-style-5': Box5,
   },
   data() {
     return {}
