@@ -8,7 +8,6 @@
 export default {
   name: 'App',
   mounted() {
-    this.$router.push(this.$store.getters.getActiveMenu())
   },
 }
 </script>
@@ -21,7 +20,7 @@ export default {
   color: #2c3e50;
   width: 100vw;
   height: 100vh;
-  overflow: hidden;
+  /* overflow: hidden; */
   user-select: none;
 }
 /*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
