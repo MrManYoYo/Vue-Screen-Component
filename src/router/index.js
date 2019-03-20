@@ -9,7 +9,13 @@ export default new Router({
     {
       path: '/',
       name: 'home',
+      redirect: '/pie',
       component: res => require(['@/components/pages/home'], res),
+      children: [{
+        path: '/pie',
+        name: 'pie',
+        component: res => require(['@/components/pages/pie'], res),
+      }],
     },
     {
       path: '/404',
