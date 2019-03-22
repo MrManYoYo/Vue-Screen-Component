@@ -1,0 +1,17 @@
+.preview-cont{
+  height: 100%;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, .9);
+  
+  .preview-cont-col{
+    position: relative;
+    left: -2.083333%;
+  }
+  .preview-card{
+    margin: 0 0 15px;
+
+    .chart-cont{
+      height: 200px;
+    }
+  }
+}

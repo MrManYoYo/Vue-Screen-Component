@@ -13,20 +13,6 @@
     height: calc( 100vh - 64px - 69px );
     color: $content-font-color;
     
-    .preview-cont{
-      height: 100%;
-      overflow-y: auto;
-      background: rgba(255, 255, 255, .9);
-      
-      .preview-cont-col{
-        position: relative;
-        left: -2.083333%;
-      }
-      .preview-card{
-        height: 200px;
-        margin: 0 0 15px;
-      }
-    }
   }
 
   .footer{
