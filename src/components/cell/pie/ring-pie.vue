@@ -28,57 +28,19 @@ export default {
     },
     updateChart() {
       !this.chart && this.initChart()
-      const pieColor1 = {
-          type: 'linear',
-          x: 0,
-          y: 0,
-          x2: 0,
-          y2: 1,
-          colorStops: [
-            {
-              offset: 0,
-              color: '#ff9f60',
-            },
-            {
-              offset: 1,
-              color: '#fdd27a',
-            },
-          ],
-        },
-        pieColor2 = {
-          type: 'linear',
-          x: 0,
-          y: 0,
-          x2: 0,
-          y2: 1,
-          colorStops: [
-            {
-              offset: 0,
-              color: '#7958ff',
-            },
-            {
-              offset: 1,
-              color: '#ac80ff',
-            },
-          ],
-        },
-        pieColor3 = {
-          type: 'linear',
-          x: 0,
-          y: 0,
-          x2: 0,
-          y2: 1,
-          colorStops: [
-            {
-              offset: 0,
-              color: '#37a0ff',
-            },
-            {
-              offset: 1,
-              color: '#60c2fe',
-            },
-          ],
-        }, borderConfig = {
+      const pieColor1 = this.createGradient({
+          dir: [0, 0, 0, 1],
+          colors: ['#ff9f60', '#fdd27a'],
+        }),
+        pieColor2 = this.createGradient({
+          dir: [0, 0, 0, 1],
+          colors: ['#7958ff', '#ac80ff'],
+        }),
+        pieColor3 = this.createGradient({
+          dir: [0, 0, 0, 1],
+          colors: ['#37a0ff', '#60c2fe'],
+        }),
+        borderConfig = {
           value: 1,
           itemStyle: {
             normal: {
@@ -154,8 +116,8 @@ export default {
                     },
                     color: pieColor1,
                     shadowColor: '#3dd4de',
-                    shadowBlur: 6,
-                    borderWidth: 6,
+                    shadowBlur: 5,
+                    borderWidth: 5,
                     borderColor: pieColor1,
                   },
                 },
@@ -193,8 +155,8 @@ export default {
                     },
                     color: pieColor2,
                     shadowColor: '#3dd4de',
-                    shadowBlur: 6,
-                    borderWidth: 6,
+                    shadowBlur: 5,
+                    borderWidth: 5,
                     borderColor: pieColor2,
                   },
                 },
@@ -232,8 +194,8 @@ export default {
                     },
                     color: pieColor3,
                     shadowColor: '#3dd4de',
-                    shadowBlur: 6,
-                    borderWidth: 6,
+                    shadowBlur: 5,
+                    borderWidth: 5,
                     borderColor: pieColor3,
                   },
                 },

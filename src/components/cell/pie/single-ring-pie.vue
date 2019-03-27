@@ -7,16 +7,13 @@ export default {
   props: {
     chartId: {
       type: String,
-      default: 'brokenRingPie',
+      default: 'singleRingPie',
     },
     source: {
       type: [Array, Object],
       default: () => [
-        { name: 'item1', value: 20 },
-        { name: 'item2', value: 20 },
-        { name: 'item3', value: 20 },
-        { name: 'item4', value: 20 },
-        { name: 'item5', value: 20 },
+        { name: 'done', value: 50 },
+        { name: 'todo', value: 50 },
       ],
     },
   },
@@ -32,7 +29,7 @@ export default {
   methods: {
     initChart() {
       if (!this.chartId) {
-        return this.$Message.error('Ring-Pie chart init failed')
+        return this.$Message.error('Single-Ring-Pie chart init failed')
       }
       this.chart = this.$echarts.init(this.$refs[this.chartId])
     },
@@ -55,49 +52,36 @@ export default {
       })
     },
     formatData(data) {
-      const pieColor1 = this.createGradient({
-          dir: [0, 0, 0, 1],
-          colors: ['#37a0ff', '#60c2fe'],
-        }),
-        emptyColor = {
-          normal: {
-            label: {
-              show: false,
-            },
-            labelLine: {
-              show: false,
-            },
-            color: 'rgba(0, 0, 0, 0)',
-            borderColor: 'rgba(0, 0, 0, 0)',
-            borderWidth: 0,
-          },
-        }
       if (Object.prototype.toString.call(data) !== '[object Array]') {
         return this.$Message.error('Incorrect data format')
       }
-      const _data = data.map(({ name, value }) => ({
-        name,
-        value,
-        itemStyle: {
+      const pieColor1 = {
           normal: {
+            color: '#b697cd',
             borderWidth: 5,
-            shadowBlur: 30,
-            borderColor: pieColor1,
-            shadowColor: 'rgba(142, 152, 241, 0.6)',
+            shadowBlur: 20,
+            borderColor: '#b697cd',
+            shadowColor: '#b697cd',
+            label: { show: false },
+            labelLine: { show: false },
           },
         },
+        placeholderStyle = {
+          normal: {
+            color: 'rgba(44,59,70,1)',
+            label: { show: false },
+            labelLine: { show: false },
+          },
+        }
+      return data.map(({ name, value }, idx) => ({
+        name,
+        value,
+        itemStyle: idx % 2 ? pieColor1 : placeholderStyle,
       }))
-      const rst = []
-      _data.forEach(item => {
-        rst.push(item, {
-          value: 5,
-          itemStyle: emptyColor,
-        })
-      })
-      return rst
     },
   },
 }
 </script>
+
 <style lang='scss' scoped>
 </style>

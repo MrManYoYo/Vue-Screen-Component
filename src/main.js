@@ -7,7 +7,7 @@ import iView from 'iview'
 import store from './store'
 import echarts from 'echarts'
 import 'iview/dist/styles/iview.css'
-
+import ChartsMixin from './assets/mixins/charts'
 Vue.config.productionTip = false;
 Vue.use(iView)
 
@@ -33,12 +33,13 @@ const fetchMock = url => {
 }
 
 Vue.prototype.$fetchMock = fetchMock
-
+Vue.mixin(ChartsMixin)
 /* eslint-disable no-new */
 new Vue({
   el: '#app',
   router,
   store,
   components: { App },
+  // mixins: [ChartsMixin],
   template: '<App/>',
 })

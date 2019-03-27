@@ -1,7 +1,7 @@
 .preview-cont{
   height: 100%;
   overflow-y: auto;
-  background: rgba(0, 0, 0, .8);
+  background: $content-body-background-color;
   border: none;
   
   .preview-cont-col{
@@ -10,7 +10,7 @@
   }
   .preview-card{
     margin: 0 0 15px;
-    background: transparent;
+    background: $content-card-background-color;
     border: none;
 
     .chart-cont{

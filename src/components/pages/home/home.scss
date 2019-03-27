@@ -4,10 +4,10 @@
   
   .container-layout{
     z-index: 1;
-    background: transparent;
+    background: $header-background-color;
   }
   .header{
-    background: transparent;
+    background: $header-background-color;
   }
 
   .content{
@@ -20,7 +20,7 @@
 
   .footer{
     text-align: center;
-    background: transparent;
-    color: #f1f1f1;
+    background: $footer-background-color;
+    color: $footer-font-color;
   }
 }
