@@ -1,5 +1,5 @@
 <template>
-  <Menu mode='horizontal' theme='dark'>
+  <Menu mode='horizontal' theme='dark' class='header-menu'>
     <MenuItem v-for='menu in menus' :key='menu.name' :name='menu.name'>
       <Icon :type='menu.icon' />
       {{menu.name}}

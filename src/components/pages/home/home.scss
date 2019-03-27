@@ -6,7 +6,10 @@
     z-index: 1;
     background: transparent;
   }
-  
+  .header{
+    background: transparent;
+  }
+
   .content{
     padding: 20px;
     box-sizing: border-box;
@@ -17,5 +20,7 @@
 
   .footer{
     text-align: center;
+    background: transparent;
+    color: #f1f1f1;
   }
 }

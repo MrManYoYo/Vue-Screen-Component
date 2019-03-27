@@ -78,6 +78,7 @@ export default {
         dot.ya *= dot.y > _this.canvas.height || dot.y < 0 ? -1 : 1
 
         // 绘制点
+        ctx.fillStyle = `rgba(255, 255, 255, 1)`
         ctx.fillRect(dot.x - 0.5, dot.y - 0.5, 1, 1)
 
         // 循环比对粒子间的距离
@@ -111,7 +112,7 @@ export default {
             // 画线
             ctx.beginPath()
             ctx.lineWidth = ratio / 2
-            ctx.strokeStyle = `rgba(0, 0, 0, ${ratio + 0.2})`
+            ctx.strokeStyle = `rgba(255, 255, 255, ${ratio + 0.2})`
             ctx.moveTo(dot.x, dot.y)
             ctx.lineTo(d2.x, d2.y)
             ctx.stroke()
@@ -157,7 +158,8 @@ export default {
 .canvas-cont{
   width: 100%;
   position: absolute;
-  top: $header-height;
+  // top: $header-height;
+  top: 0;
   left: 0;
   right: 0;
   bottom: 0;
@@ -167,7 +169,7 @@ export default {
     width: 100%;
     height: 100%;
     display: block;
-    background: #efefef;
+    background: #000;
   }
 }
 </style>
